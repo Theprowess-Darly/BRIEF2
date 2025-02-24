@@ -1,57 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generateur de CV</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="./assets/js/jquery-3.7.1.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1>D-Files</h1>
-    </header>
-    
-    <div class="container " >
-        <div class="left">
-            <div class="left-content">
-                <h2>Informations personnelles</h2>
-                <form action="" method="post" id="form">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generateur de CV</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <script src="https://unpkg.com/@tailwindcss/browser@4" defer></script>
+        <script src="./assets/js/jquery-3.7.1.js" defer></script>
+    </head>
+    <body>
+        <header class="flex justify-between h-6 py-6 space-x-8 mx:5 bg-gray-100">
+            <div class="logo h-full">
+                <img src="./assets/img/logoB.png" alt="the CV Lab" class="h-full">
+            </div>
+            <nav class="flex justify-between items-center">            
+                <a href="#" class="text-gray-700 hover:text-gray-900">Accueil</a></li>
+            </nav>
+            <button class="rounded-lg bg-orange-700 text-white px-4 py-2 hover:bg-orange-400">Creer un cv</button>
+        </header>
+
+        <section class="container space-x-4 mx-4 flex justify-between">
+            <div class="content max-width:1/2 py-2 ">
+                <details name="accordion">
+                    <summary><span>Information personnelles</span></summary>
                     <div>
-                        <!-- photo de profil -->
-                    </div>                    
-                    <div class="form-group">
                         <div>
-                            <label for="name">Nom</label>
-                            <input type="text" name="name" id="name" required>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full name</label>
+                            <input type="text" id="fullname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nom complet" required />
+                        </div>
+                       
+                        <div class="flex justify-between">
+                            <div>
+                                <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age</label>
+                                <input type="number" min="13" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="13" required />
+                            </div>
+                            <div>
+                                <label for="sex" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sexe</label>
+                                <select id="sex" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option value="M">Masculin</option>
+                                    <option value="F">Feminin</option>
+                                </select>
+                            </div>
+                        </div>
+                         <div>
+                            <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Addresse</label>
+                            <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="address" required />
                         </div>
                         <div>
-                            <label for="age">Age</label>
-                            <input type="number" name="age" id="age" required>
+                            <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age</label>
+                            <input type="number" min="13" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="13" required />
                         </div>
                         <div>
-                            <label for="title">Titre du poste</label>
-                            <input type="text" name="title" id="title">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
                         </div>
                         <div>
-                            <label for="address">Adresse</label>
-                            <input type="text" name="address" id="address">
-                        </div>
-                        <div>
-                            <label for="email">email</label>
-                            <input type="text" name="email" id="email" required>
+                            <label for="titre">Titre du poste</label>
+                            <input type="text" name="titre" id="titre" required>
                         </div>
                     </div>
-                </form>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </details>
+                <!-- <details name="accordion">
+                    <summary>
+                        <h2> Experience Professionelles</h2>               
+                    </summary>
+                    <div>
+                        nom de l'entreprise
+                        poste occupe
+                        description
+                    </div>
+                </details>
+                <details name="accordion">
+                    <summary>
+                        Formations
+                    </summary>
+                    <div>
+                        Diplomes
+                        etablissement
+                        annee
+                    </div>
+                </details>
+                <details name="accordion">
+                    <summary>
+                        Competences
+                    </summary>
+                    <div>
+                        liste avec niveaux de maitrise                    
+                    </div>
+                </details>
+                <details name="accordion">
+                    <summary>
+                        Centres D'interet
+                    </summary>
+                    <div>
+                        liste de loisirs
+                    </div>
+                </details>
+                <details name="accordion">
+                    <summary>
+                        References
+                    </summary>
+                    <div>
+                        nom
+                        poste
+                        contact
+                    </div>
+                </details>
+                <details name="accordion">
+                    <summary>
+                        Langues
+                    </summary>
+                    <div>
+                        langues maitrisee
+                        niveau d'expertise
+                    </div>
+                </details> -->
             </div>
-        </div> 
 
-        <div class="right">
+            <!-- visuel en temps reel -->
+            <div class="width:1/2 py-2">
+                voici votre cv
 
-        </div>
-    </div>
+            </div>
 
-    <script src="./assets/js/script.js"></script>
-</body>
-</html
+        </section>
+
+        <script src="./assets/js/script.js"></script>
+    </body>
+ 
+
+</html>
+
+
+
+
+   
