@@ -2,19 +2,19 @@
 $( "#fullname" ).on( "keyup", function( event ) {
     $("#templateName").text(event.target.value) ;
 } );
-$( "#age" ).on( "keyup", function( event ) {
-    $("#templateAge").text(event.target.value) ;
+$( "#age" ).on( "change", function( event ) {
+    $("#templateAge").text("Age "+event.target.value +" ans") ;
 } );
-$( "#sex" ).on( "keyup", function( event ) {
+$( "#sex" ).on( "change", function( event ) {
     $("#templateSex").text(event.target.value) ;
 } );
 $( "#address" ).on( "keyup", function( event ) {
     $("#templateAddress").text(event.target.value) ;
 } );
-$( "#telephone" ).on( "keyup", function( event ) {
+$( "#telephone" ).on( "change", function( event ) {
     $("#templatePhone").text(event.target.value) ;
 } );
-$( "#picture" ).on( "keyup", function( event ) {
+$( "#picture" ).on( "change", function( event ) {
     $("#templatePicture").text(event.target.value) ;
 } );
 $( "#email" ).on( "keyup", function( event ) {
