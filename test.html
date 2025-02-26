@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-bold mb-4 text-center">FORMANTIONS</h2>
+
+        <div id="form-container">
+            <div class="input-group mb-4 ">               
+                <input type="text" id="diplome0" name="diplome0" class="w-full pl-10 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Diplôme et établissement">                
+                <input type="text" id="annee0" name="annee0" class="w-full pr-10 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="année">
+            </div>
+        </div>
+        <button id="addExperience" class="p-2 bg-orange-500 text-white bg-orange-700 border-2 rounded-lg shadow-md shadow-gray-500 hover:underline">
+            Ajouter une formation +
+        </button>
+
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let counter = 1;
+
+            $('#addExperience').click(function() {
+                let newInputGroup = $('.input-group').first().clone();
+                
+                // Update IDs and names
+                newInputGroup.find('#diplome0').attr('id', 'diplome' + counter).attr('name', 'diplome' + counter);
+                newInputGroup.find('#annee0').attr('id', 'annee' + counter).attr('name', 'annee' + counter);
+
+                $('#form-container').append(newInputGroup);
+                counter++;
+            });
+        });
+    </script>
+
+</body>
+</html>
