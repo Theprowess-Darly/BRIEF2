@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>CV LAB</title>
+         <link rel="stylesheet" href="./assets/css/index.css">
+         <script src="./assets/js/index.js" defer></script>
+         <script src="https://unpkg.com/@tailwindcss/browser@4" defer></script>
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
+    </head>
+    <body class="bg-[#ca6f40] font-['montserrat', sans-serif]">
+        <!-- Header -->
+        <header class="flex justify-between h-30 py-2 space-x-8 px-10  bg-gray-100">
+            <div class="logo w- h-full">
+                <img src="./assets/img/logoB.png" alt="the CV Lab" class="h-25 w-25">
+            </div>
+            <nav class="flex justify-between items-center">            
+                <a href="#" class="text-orange-700 text-2xl hover:text-gray-900">Laboratoire</a></li>
+            </nav>
+            
+            <div class="flex items-center">
+                <button class="rounded-lg bg-orange-700 text-white px-4 py-2 hover:bg-orange-400">
+                    <a href="cvLab.html">
+                        Creer Un cv
+                    </a>
+                </button>
+            </div>
+
+        </header>
+      <!-- SECTION HERO: côté texte et image -->
+        <div class="container mx-auto px-2 py-8 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Texte à gauche (100% de sa colonne) -->
+                <div class="text-center md:text-left text-white">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                        Le CV idéal en <br class="hidden md:block">toute facilité
+                    </h1>
+                    <ol class="space-y-2 text-lg">
+                        <li>1. Soumettez le contenu de<br class="hidden md:block">votre choix</li>
+                        <li>2. Téléchargez votre CV pro</li>
+                    </ol>
+                </div>
+
+                <!-- Image à droite (100% de sa colonne) -->
+                <div class="flex justify-center md:justify-end">
+                    <img src="./assets/img/pictures/mains serrées.jpg" alt="mains serrées" class="w-full h-auto">
+                </div>
+            </div>
+        </div> 
+             <!-- Bande titre -->
+        <div class="bg-[#abc0cf] py-8"> 
+            <div class="container mx-auto px-2 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                 COMMENT ÇA MARCHE ? 
+                </h2>
+            </div>
+        </div>
+      <!-- SECTION 2: les étapes de production du CV -->
+        <div class="container mx-auto px-2 py-8 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8"> 
+             <!-- Colonne 1 -->
+                <div class="text-center">
+                    <div class="relative">
+                        <img src="./assets/img/pictures/click.jpg" alt="Image 1" class="w-full h-64 object-cover"> 
+                        <div class="absolute inset-x-0 bottom-0 bg-white-transparent bg-opacity-50 p-4">
+                            <p class="text-lg text-black"><em><strong>Cliquez  sur CREER CV</strong></em>.</p>
+                        </div>
+                    </div>
+                </div>
+         
+             <!-- Colonne 2 -->
+                <div class="text-center">
+                    <div class="relative">
+                        <img src="./assets/img/pictures/tape tes infos2.jpg" alt="Image 2" class="w-full h-64 object-cover"> 
+                        <div class="absolute inset-x-0 bottom-0 bg-white-transparent bg-opacity-50 p-4">
+                            <p class="text-lg text-black"><em><strong>Cliquez sur l’élément du sommaire et <br>et remplissez les espaces vides <br> à votre guise</strong></em></p>
+                        </div>
+                    </div>
+                </div>
+         
+             <!-- Colonne 3 -->
+                <div class="text-center">
+                    <div class="relative">
+                        <img src="./assets/img/pictures/Téléchargement doc.jpg" alt="Image 3" class="w-full h-64 object-cover"> 
+                        <div class="absolute inset-x-0 bottom-0 bg-white-transparent bg-opacity-50 p-4">
+                            <p class="text-lg text-black"><em><strong>Télécharger le rendu.</strong></em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SECTION 3: avis utilisateurs -->
+                <!-- Bande titre -->
+        <div class="bg-[#abc0cf] py-8"> 
+            <div class="container mx-auto px-2 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                 AVIS UTILISATEURS ? 
+                </h2>
+            </div>
+        </div>
+         <!-- Slider-->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+            <img src="./assets/img/slider/Group1-30.webp" style="width:100%">
+            </div>
+              
+            <div class="mySlides fade">
+            <img src="./assets/img/slider/Group2-31.webp" style="width:100%">
+            </div>
+              
+            <div class="mySlides fade">
+            <img src="./assets/img/slider/Group3-32.webp" style="width:100%">
+            </div>
+        
+            <button class="retour" onclick="plusSlides(-1)">←</button>
+            <button class="suivant" onclick="plusSlides(1)">→</button>
+        </div>
+    
+    
+    </body>
+</html>
