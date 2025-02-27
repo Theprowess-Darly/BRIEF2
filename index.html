@@ -12,11 +12,11 @@
     <body class="bg-[#ca6f40] font-['montserrat', sans-serif]">
         <!-- Header -->
         <header class="flex justify-between h-30 py-2 space-x-8 px-10  bg-gray-100">
-            <div class="logo w- h-full">
-                <img src="./assets/img/logoB.png" alt="the CV Lab" class="h-25 w-25">
+            <div class="w-25 h-25">
+                <img src="./assets/img/logoB.png" alt="logo" >
             </div>
-            <nav class="flex justify-between items-center">            
-                <a href="#" class="text-orange-700 text-2xl hover:text-gray-900">Laboratoire</a></li>
+            <nav class="flex items-center">            
+                <a href="#" class="text-orange-700 text-2xl hover:text-gray-900">Acceuil</a></li>
             </nav>
             
             <div class="flex items-center">
@@ -70,9 +70,9 @@
                 </div>
          
              <!-- Colonne 2 -->
-                <div class="text-center">
+                <div class="text-center h-full">
                     <div class="relative">
-                        <img src="./assets/img/pictures/tape tes infos2.jpg" alt="Image 2" class="w-full h-64 object-cover"> 
+                        <img src="./assets/img/pictures/tape tes infos2.jpg" alt="Image 2" class="w-full object-cover"> 
                         <div class="absolute inset-x-0 bottom-0 bg-white-transparent bg-opacity-50 p-4">
                             <p class="text-lg text-black"><em><strong>Cliquez sur l’élément du sommaire et <br>et remplissez les espaces vides <br> à votre guise</strong></em></p>
                         </div>
@@ -117,7 +117,35 @@
             <button class="retour" onclick="plusSlides(-1)">←</button>
             <button class="suivant" onclick="plusSlides(1)">→</button>
         </div>
-    
+        <footer class="bg-gray-950 py-10 text-white">
+            <div class="containerfooter text-sm px-10 flex justify-between">
+                <div class="w-1/5">
+                    <img src="./assets/img/logoW.jpg" alt="logo" class="w-25 h-25">
+                </div>
+               
+                <div class="p-5">
+                    <h3 class="text-2xl">RESOURCES</h3>
+                    <p>CV exemples</p>
+                    <p>articles</p>
+                    <p>resumé</p>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-2xl">PRODUITS</h3>
+                    <p>Modele de CV</p>
+                    <p>review</p>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-2xl">SUPPORTS</h3>
+                    <p>FAQ</p>
+                    <p>contact</p>
+                    <p>à propos</p>
+                </div>
+                <div class="  mt-20 ">
+                    <button type="menu" class="py-2 px-4 hover:bg-orange-400 bg-orange-700 rounded-lg"><a href="./cvLab.html">CREER CV</a></button>
+                </div>
+            </div>
+            
+        </footer>
     
     </body>
 </html>
