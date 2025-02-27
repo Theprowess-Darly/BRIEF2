@@ -30,7 +30,7 @@ function previewImage() {
 
   fileReader.onload = (fileReaderEvent) => {
     const profilePicture = document.querySelector('.profile-picture');
-    profilePicture.style.backgroundImage = `url(${fileReaderEvent.target.result})`;
+    profilePicture.style.backgroundImage = `url(${fileReaderEvent.target.result})`; //to automaticllay display the image on the CV
     imageCv.src = fileReaderEvent.target.result
   }
 
