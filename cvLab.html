@@ -16,12 +16,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" defer></script>
     </head>
     <body class=" mx-4">
-        <header class="flex justify-between h-30 py-2 space-x-8 px-10  bg-gray-100">
+        <header class="flex justify-between h-30 py-2 space-x-8 px-10 m-4  bg-gray-100">
             <div class="logo h-full">
                 <img src="./assets/img/logoB.png" alt="the CV Lab" class="h-25 w-25">
             </div>
             <nav class="flex justify-between items-center">            
-                <a href="#" class="text-orange-700 text-2xl hover:text-gray-900">Laboratoire</a></li>
+                <a href="./index.html" class="text-orange-700 text-2xl hover:text-gray-900">Acceuil</a></li>
             </nav>
             <div class="flex items-center">
                 <button id="export_btn" class="rounded-lg bg-orange-700 text-white px-4 py-2 hover:bg-orange-400">Telecharger le cv</button>
@@ -30,7 +30,7 @@
 
         <section class=" mx-4 grid md:grid-cols-2 gap-4 grid-cols-1">
             <!-- remplir les informations -->
-            <div id="fillInfo" class="content w-full py-2 overflow-scroll h-screen">
+            <div id="fillInfo" class="content w-full py-2 md:overflow-scroll md:h-screen">
                 <!-- informations personnelles -->
                 <details class="my-10" name="accordion">
                     <summary><span class="text-2xl p-3 my-3 bg-white text-black border-orange-300 border-2 shadow-md shadow-gray-500 hover hover:text-orange-600">Information personnelles</span></summary>
@@ -54,15 +54,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div>
-                                <label for="address" class="block mb-2 text-sm font-medium text-gray-900 ">Address</label>
-                                <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Address" required />
-                            </div>
-                            <div>
-                                <label for="telephone" class="block mb-2 text-sm font-medium text-gray-900 ">Telephone</label>
-                                <input type="number" min="+000" id="telephone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="+237 0000000" required />
-                            </div>
-                        
+                                                  
                         </div>
                         <!-- photo de profil -->
                         <div class="md:pt-12 my-4" id="picture">
@@ -76,8 +68,17 @@
                             </div> 
                         </div>
                                              
-                    </div>                       
+                    </div>  
+
                     <div>
+                        <div>
+                            <label for="address" class="block mb-2 text-sm font-medium text-gray-900 ">Address</label>
+                            <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Address" required />
+                        </div>
+                        <div>
+                            <label for="telephone" class="block mb-2 text-sm font-medium text-gray-900 ">Telephone</label>
+                            <input type="number" min="+000" id="telephone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="+237 0000000" required />
+                        </div>
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
                             <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="email@votreemail.com" required />
@@ -159,7 +160,7 @@
                         
                         </div>
                     </div>                    
-                    <button id="addtraining" class="my-2 p-2  text-blue-500  shadow-md hover:text-red-500 hover:underline">
+                    <button id="addtraining" class="my-2 mx-4 pr-6 p-2  text-blue-500  shadow-md hover:text-red-500 hover:underline">
                         Ajouter une formation +
                     </button>
                 </details>
@@ -183,14 +184,14 @@
                             </div>                        
                         </div>
                     </div>                    
-                    <button id="addSkills" class="my-2 p-2  text-blue-500  shadow-md hover:text-red-500 hover:underline">
+                    <button id="addSkills" class="my-2 p-2 mx-4 pr-6  text-blue-500  shadow-md hover:text-red-500 hover:underline">
                         Ajouter une Competence +
                     </button>                    
                 </details>                
                 <!-- centres d'interet -->
                 <details class="my-10" name="accordion">
                     <summary><span class="text-2xl p-3 my-3 bg-white text-black border-orange-300 border-2 shadow-md shadow-gray-500 hover hover:text-orange-600">Centres d'interet</span></summary>
-                    <div>
+                    <div class="mx-4 pr-6">
                         <label for="interest" class="block mt-8 mb-2 text-sm font-medium text-gray-900 ">Ajoutez vos loisirs</label>
                         <input type="text" id="interest" name="interest" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="loisir1, loisir2, loisir3, ..." required />
                    </div>
@@ -199,7 +200,7 @@
                 <!-- References -->
                 <details class="my-10" name="accordion">
                     <summary><span class="text-2xl p-3 my-3 bg-white text-black border-orange-300 border-2 shadow-md shadow-gray-500 hover hover:text-orange-600">References</span></summary>
-                    <div>
+                    <div class="mx-4 pr-6">
                         <div>
                             <label for="refName" class="block mt-8 mb-2 text-sm font-medium text-gray-900 ">Nom complet</label>
                             <input type="text" id="refName" name="refName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Nom complet" required />
@@ -222,15 +223,15 @@
                             </div>
                         </div>
                     </div>  
-                    <button id="addReference" class="my-2 p-2 bg-gray-300 text-white bg-gray-700 border-2 rounded-lg shadow-md shadow-gray-500 hover:text-black hover:underline">
+                    <button id="addReference" class="my-2 p-2 mx-4 pr-6 bg-gray-300 text-white bg-gray-700 border-2 rounded-lg shadow-md shadow-gray-500 hover:text-black hover:underline">
                         Ajouter une reference +
                     </button>
                 </details>
                 <!-- Langues -->
-                <details class="my-10" name="accordion">
+                <details class="md:my-10" name="accordion">
                     <summary><span class="text-2xl p-3 my-3 bg-white text-black border-orange-300 border-2 shadow-md shadow-gray-500 hover hover:text-orange-600">Langues</span></summary>
 
-                    <div class="gap-2 flex justify-between">
+                    <div class="gap-2 mx-4 pr-6 flex justify-between">
                         <div class="w-full">
                             <label for="skills" class="block mb-2 text-sm mt-8 mb-2 font-medium text-gray-900 ">Langue</label>
                             <input type="text" id="skills" name="skills" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Competences" required />
@@ -265,8 +266,8 @@
                           </div>
                           
                           <div class="info-container">
-                            <p class="name w-full text-wrap" id="templateName">Votre nom ici</p>
-                            <p class="titre" id="templateTitre">Votre poste ici</p>
+                            <p class="name w-full text-wrap" id="templateName">Votre nom</p>
+                            <p class="titre" id="templateTitre">Votre poste</p>
                           </div>
                         </div>
                     </div>                     
@@ -277,8 +278,8 @@
                 
                             <div class="flex flex-col sm:w-2/5">                               
                                 <div class=" py-3 sm:order-none order-3">
-                                     <!-- Infos personelles -->
-                                    <h2 class="text-lg font-poppins font-bold text-top-color">Informations personnelle</h2>
+                                    <!-- Infos personelles -->
+                                    <h3 class="text-lg font-poppins font-bold text-top-color">Informations personnelle</h3>
                                     <div class="border-2 w-40 border-top-color my-3"></div>
 
                                     <div>
@@ -533,6 +534,7 @@
 
         </section>
 
+        <!-- download option -->
         <script>
             $('#export_btn').on("click", function () {
                 console.log("Process export");
@@ -565,7 +567,38 @@
             });
         </script>
 
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <!-- footer -->
+        <footer class="bg-gray-950 text-orange-400 m-4 p">
+            <div class="containerfooter text-sm px-10 md:flex justify-between">
+                <div class="pt-4 w-1/5">
+                    <img src="./assets/img/logoW.jpg" alt="logo" class="w-25 h-25">
+                </div>
+               
+                <div class="p-5">
+                    <h3 class="text-2xl">RESOURCES</h3>
+                    <p>CV exemples</p>
+                    <p>articles</p>
+                    <p>resumé</p>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-2xl">PRODUITS</h3>
+                    <p>Modele de CV</p>
+                    <p>review</p>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-2xl">SUPPORTS</h3>
+                    <p>FAQ</p>
+                    <p>contact</p>
+                    <p>à propos</p>
+                </div>
+                <div class="  mt-20 ">
+                    <button type="menu" class="py-2 px-4 hover:bg-orange-400 text-white bg-orange-700 rounded-lg"><a href="./cvLab.html">CREER CV</a></button>
+                </div>
+            </div>
+            
+        </footer>
+
+       <!-- scripts -->
         <script src="./assets/js/script.js" defer></script>
         <script src="./assets/js/upload.js" defer></script>
         <!-- <script src="./assets/js/export.js" defer></script> -->
