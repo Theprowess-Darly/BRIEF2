@@ -48,11 +48,11 @@ $(document).ready(function() {
 
         $('#experience-container').append(newExperienceInputGroup);
 
-         // Append the new experience input group to the new container
-        // $('#new-experience-space').append(newExperienceInputGroup);
+            // Append the new experience input group to the new container
+            // $('#new-experience-space').append(newExperienceInputGroup);
 
-        // Attach event listeners to the new elements dynamically
-        // bindExperienceEvents(counterE);
+            // Attach event listeners to the new elements dynamically
+            // bindExperienceEvents(counterE);
 
         counterE++;
     }); 
@@ -60,7 +60,7 @@ $(document).ready(function() {
     $('#experience-container').on('click', '.delete-experience', function() {
         $(this).closest('.experienceInput-group').remove();
     });
-//     // Function to bind event listeners to dynamically added elements
+    //     // Function to bind event listeners to dynamically added elements
 // function bindExperienceEvents(counterE) {
 //     // Bind keyup and change events for dynamically added elements
 //     $('#companyName' + counterE).on('keyup', function(event) {
@@ -82,9 +82,9 @@ $(document).ready(function() {
 //     $('#descriptionPoste' + counterE).on('keyup', function(event) {
 //         $("#templateDescriptionPoste").text(event.target.value);
 //     });
-}
 
-// Ajouter competences
+
+ // Ajouter competences
     let counterC = 1;
 
     $('#addSkills').click(function() {
@@ -107,7 +107,7 @@ $(document).ready(function() {
         $(this).closest('.competencesInput-group').remove();
     });
 
-// Ajouter reference
+    // Ajouter reference
     let counterR = 1;
 
     $('#addReference').click(function() {
@@ -132,7 +132,7 @@ $(document).ready(function() {
         $(this).closest('.referenceInput-group').remove();
     });
 
-// Ajouter Langue
+    // Ajouter Langue
     let counterL = 1;
 
     $('#addLang').click(function() {
@@ -154,4 +154,4 @@ $(document).ready(function() {
     $('#langue-container').on('click', '.delete-lang', function() {
         $(this).closest('.langueInput-group').remove();
     });
-});
+})
